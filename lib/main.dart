@@ -19,10 +19,14 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      initialRoute: router.Router.loginView,
+      initialRoute: router.Router.homeView,
       debugShowCheckedModeBanner: false,
       onGenerateRoute: router.Router.generateRoute,
       navigatorKey: services.StackedService.navigatorKey,
+      title: 'Practice App',
+      theme: ThemeData(
+        useMaterial3: true,
+      ),
     );
   }
 }
